@@ -1,20 +1,30 @@
 using UnityEngine;
+using UnityEngine.InputSystem.OnScreen; 
 using UnityEngine.UI;
 
 public class SpawnManager : MonoBehaviour
 {
-     [SerializeField]
+    [SerializeField]
     private GameObject objectToInstantiate; // The sphere prefab
 
     [SerializeField]
     private Button removeButton; // The button to remove the sphere
 
+    // Ensure this is the correct type for your on-screen stick
+    [SerializeField]
+    private OnScreenStick onScreenStick; // The on-screen stick to control the sphere.
+
+    [SerializeField]
+    private GameObject onScreenStickBackground; // The black background behind the stick
+
     private GameObject currentInstance; // The current sphere instance
 
     void Start()
     {
-        // Initially disable the remove button
+        // Initially disable the remove button and the stick+background
         removeButton.gameObject.SetActive(false);
+        onScreenStick.gameObject.SetActive(false);
+        onScreenStickBackground.SetActive(false);
         removeButton.onClick.AddListener(RemoveCurrentInstance);
     }
 
@@ -33,8 +43,10 @@ public class SpawnManager : MonoBehaviour
                 {
                     // Instantiate the object and store the reference
                     currentInstance = Instantiate(objectToInstantiate, hit.point + new Vector3(0, 0.1f, 0), Quaternion.identity);
-                    // Enable the remove button
+                    // Enable the remove button and the stick
                     removeButton.gameObject.SetActive(true);
+                    onScreenStick.gameObject.SetActive(true);
+                    onScreenStickBackground.SetActive(true);
                 }
             }
         }
@@ -46,8 +58,11 @@ public class SpawnManager : MonoBehaviour
         if (currentInstance != null)
         {
             Destroy(currentInstance);
-            // Disable the remove button
+
+            // Disable the remove button and the stick
             removeButton.gameObject.SetActive(false);
+            onScreenStick.gameObject.SetActive(false);
+            onScreenStickBackground.SetActive(false);
         }
     }
 }
