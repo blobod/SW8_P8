@@ -5,9 +5,9 @@ https://git-lfs.com/
 
 ### For mac users:
 
-  From their **website**: 
+From their **website**: 
     
-    https://git-lfs.com/
+  https://git-lfs.com/
 
 Or using **Brew**:
   1. Open the terminal.
