@@ -1,5 +1,6 @@
-Install Git LFS before pushing to repository:
-https://git-lfs.com/
+In order to correctly pull/push files to/from the repository you will need to set up Git LFS.
+
+Firstly, ensure you have Git LFS installed. Below is a guide on how to install Git LFS for mac users:
 
 ## How to install **Git LFS**
 
