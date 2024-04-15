@@ -20,4 +20,4 @@ Or using **Brew**:
 ## Pull using Git LFS ##
   1. Open a terminal.
   2. Navigate to the directory of the repository.
-  3. Run `git lfs pull`
+  3. Run `git lfs pull`.
