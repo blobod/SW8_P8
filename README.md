@@ -1,4 +1,4 @@
-## Setting Up ##
+# Setting Up #
 
 In order to correctly pull/push files to/from the repository you will need to set up Git LFS.
 
