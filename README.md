@@ -16,3 +16,8 @@ Or using **Brew**:
   1. Open a terminal.
   2. Navigate to the directory of the repository.
   3. Run `brew install git-lfs`.
+
+## Pull using Git LFS ##
+  1. Open a terminal.
+  2. Navigate to the directory of the repository.
+  3. Run 'git lfs pull'
