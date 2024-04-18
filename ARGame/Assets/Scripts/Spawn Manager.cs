@@ -64,7 +64,7 @@ public class SpawnManager : MonoBehaviour
                     currentRectIndex++;
 
                     // Instantiate the sphere on the first spawned rectangle
-                    currentInstance = Instantiate(spherePrefab, initialRectangle.transform.position + new Vector3(0, 0.1f, 0), Quaternion.identity);
+                    currentInstance = Instantiate(spherePrefab, initialRectangle.transform.position + new Vector3(0, 1, 0), Quaternion.identity);
                     // Enable the remove button and the stick
                     removeButton.gameObject.SetActive(true);
                     onScreenStick.gameObject.SetActive(true);
@@ -87,7 +87,7 @@ public class SpawnManager : MonoBehaviour
             Debug.Log("Ball Position: " + currentInstance.transform.position);
             Debug.Log("First Rectangle Position: " + rectangles[0].transform.position);
         // Reset the ball to its initial position on the first rectangle
-        currentInstance.transform.position = rectangles[0].transform.position + new Vector3(0, 0.1f, 0);
+        currentInstance.transform.position = rectangles[0].transform.position + new Vector3(0, 0.3f, 0);
     }
 
     public void RemoveCurrentInstance()
